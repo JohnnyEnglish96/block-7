@@ -365,6 +365,7 @@ button {
 .wrapper-menu {
   box-sizing: border-box !important;
   width: 320px;
+  height: 100%;
   font-family: 'TT Lakes', sans-serif;
   font-weight: 500;
   background-color: #ffffff;
@@ -377,9 +378,11 @@ button {
   z-index: 2;
   overflow-y: auto;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
+  .wrapper-menu::-webkit-scrollbar {
+    display: none; }
 
 .wrapper-menu-content {
-  min-height: 100vh;
+  min-height: 100%;
   padding: 24px 24px 32px 24px;
   display: flex;
   flex-direction: column;
