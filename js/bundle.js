@@ -253,6 +253,9 @@ const buttonImgChat = document.querySelector('.button-img-chat')
 const modalChatWindow = document
   .querySelector('.container-modal-feedback')
   .querySelector('.modal-input')
+const modalCallWindow = document
+  .querySelector('.container-modal-call')
+  .querySelector('.modal-input')
 
 document.addEventListener('click', function (evt) {
   if (menuWraper.classList.contains('wrapper-menu-add')) {
@@ -324,7 +327,6 @@ buttonChatAdd.addEventListener('click', function () {
   modalFeedback.classList.toggle('modal-feedback-add')
   body.classList.add('body-add')
   modalChatWindow.focus()
-  console.log(modalChatWindow)
 })
 
 modalFeedbackButtonClose.addEventListener('click', function () {
@@ -334,6 +336,7 @@ modalFeedbackButtonClose.addEventListener('click', function () {
 buttonCallAdd.addEventListener('click', function () {
   modalCall.classList.toggle('modal-call-add')
   body.classList.add('body-add')
+  modalChatWindow.focus()
 })
 modalCallButtonClose.addEventListener('click', function () {
   modalCall.classList.toggle('modal-call-add')
@@ -343,11 +346,21 @@ menuCallButton.addEventListener('click', function () {
   menuWraper.classList.toggle('wrapper-menu-add')
   modalCall.classList.toggle('modal-call-add')
   body.classList.add('body-add')
+  modalChatWindow.focus()
 })
 menuChatButton.addEventListener('click', function () {
   menuWraper.classList.remove('wrapper-menu-add')
   modalFeedback.classList.add('modal-feedback-add')
   body.classList.add('body-add')
+  modalChatWindow.focus()
+})
+
+modalFeedback.addEventListener('transitionstart', (e) => {
+  modalChatWindow.focus()
+})
+
+modalCall.addEventListener('transitionstart', (e) => {
+  modalCallWindow.focus()
 })
 
 

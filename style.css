@@ -728,7 +728,7 @@ button {
   .container-modal-call .modal-footer-link {
     color: #ff3e79; }
   .container-modal-call .modal-submit-button-wraper {
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
     margin-top: 19px; }
   .container-modal-call .modal-submit-button {
@@ -1027,7 +1027,7 @@ button {
 /* Swiper start */
 .swiper {
   max-width: 100%;
-  z-index: 0; }
+  z-index: 0 !important; }
   .swiper .swiper-wrapper {
     padding: 16px 0 0 0;
     min-height: 110px; }
@@ -1037,7 +1037,8 @@ button {
     min-height: 240px; }
   .swiper .swiper-slide {
     max-width: 240px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    z-index: 0 !important; }
   .swiper .swiper-slide-var2 {
     max-width: 240px; }
   .swiper .swiper-slide-var3 {
