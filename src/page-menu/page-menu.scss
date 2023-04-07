@@ -4,6 +4,7 @@ $color-grey: #7e7e82;
 
 .body-add {
   overflow: hidden;
+  position: relative;
   &::before {
     content: '';
     width: 100%;
@@ -20,6 +21,7 @@ $color-grey: #7e7e82;
 .wrapper-menu {
   box-sizing: border-box !important;
   width: 320px;
+  height: 100%;
   font-family: 'TT Lakes', sans-serif;
   font-weight: 500;
   background-color: $bg-white;
@@ -33,9 +35,12 @@ $color-grey: #7e7e82;
   overflow-y: auto;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
     16px 0px 52px rgba(14, 24, 80, 0.2);
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .wrapper-menu-content {
-  min-height: 100vh;
+  min-height: 100%;
   padding: 24px 24px 32px 24px;
   display: flex;
   flex-direction: column;
@@ -239,10 +244,9 @@ $color-grey: #7e7e82;
   }
 }
 @media (max-width: 320px) {
-  .wrapper-menu {
+  .wrapper-menu-content {
     padding: 23px 16px 32px 16px;
   }
-
   .main-menu-nav__link:hover .main-menu-nav__link-address::before {
     content: url('../assets/img/highlight.svg');
     position: absolute;

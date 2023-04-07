@@ -2,7 +2,7 @@
 
 .swiper {
   max-width: 100%;
-  z-index: 0;
+  z-index: 0 !important;
   .swiper-wrapper {
     padding: 16px 0 0 0;
     min-height: 110px;
@@ -16,6 +16,7 @@
   .swiper-slide {
     max-width: 240px;
     box-sizing: border-box;
+    z-index: 0 !important;
   }
   .swiper-slide-var2 {
     max-width: 240px;

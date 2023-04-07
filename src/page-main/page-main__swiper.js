@@ -140,6 +140,9 @@ const buttonImgChat = document.querySelector('.button-img-chat')
 const modalChatWindow = document
   .querySelector('.container-modal-feedback')
   .querySelector('.modal-input')
+const modalCallWindow = document
+  .querySelector('.container-modal-call')
+  .querySelector('.modal-input')
 
 document.addEventListener('click', function (evt) {
   if (menuWraper.classList.contains('wrapper-menu-add')) {
@@ -199,40 +202,47 @@ function buttonCheckVar2() {
 }
 
 buttonBurgerAdd.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
+  menuWraper.classList.add('wrapper-menu-add')
   body.classList.add('body-add')
 })
 
 buttonBurgerRem.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
+  menuWraper.classList.remove('wrapper-menu-add')
   body.classList.remove('body-add')
 })
 buttonChatAdd.addEventListener('click', function () {
-  modalFeedback.classList.toggle('modal-feedback-add')
+  modalFeedback.classList.add('modal-feedback-add')
   body.classList.add('body-add')
-  modalChatWindow.focus()
-  console.log(modalChatWindow)
+})
+buttonCallAdd.addEventListener('click', function () {
+  modalCall.classList.add('modal-call-add')
+  body.classList.add('body-add')
 })
 
 modalFeedbackButtonClose.addEventListener('click', function () {
   modalFeedback.classList.toggle('modal-feedback-add')
   body.classList.remove('body-add')
 })
-buttonCallAdd.addEventListener('click', function () {
-  modalCall.classList.toggle('modal-call-add')
-  body.classList.add('body-add')
-})
+
 modalCallButtonClose.addEventListener('click', function () {
-  modalCall.classList.toggle('modal-call-add')
+  modalCall.classList.remove('modal-call-add')
   body.classList.remove('body-add')
 })
 menuCallButton.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
-  modalCall.classList.toggle('modal-call-add')
+  menuWraper.classList.remove('wrapper-menu-add')
+  modalCall.classList.add('modal-call-add')
   body.classList.add('body-add')
 })
 menuChatButton.addEventListener('click', function () {
   menuWraper.classList.remove('wrapper-menu-add')
   modalFeedback.classList.add('modal-feedback-add')
   body.classList.add('body-add')
+})
+
+modalFeedback.addEventListener('transitionstart', (e) => {
+  modalChatWindow.focus()
+})
+
+modalCall.addEventListener('transitionstart', (e) => {
+  modalCallWindow.focus()
 })
