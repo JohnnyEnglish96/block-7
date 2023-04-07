@@ -315,16 +315,16 @@ function buttonCheckVar2() {
 }
 
 buttonBurgerAdd.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
+  menuWraper.classList.add('wrapper-menu-add')
   body.classList.add('body-add')
 })
 
 buttonBurgerRem.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
+  menuWraper.classList.remove('wrapper-menu-add')
   body.classList.remove('body-add')
 })
 buttonChatAdd.addEventListener('click', function () {
-  modalFeedback.classList.toggle('modal-feedback-add')
+  modalFeedback.classList.add('modal-feedback-add')
   body.classList.add('body-add')
   modalChatWindow.focus()
 })
@@ -334,7 +334,7 @@ modalFeedbackButtonClose.addEventListener('click', function () {
   body.classList.remove('body-add')
 })
 buttonCallAdd.addEventListener('click', function () {
-  modalCall.classList.toggle('modal-call-add')
+  modalCall.classList.add('modal-call-add')
   body.classList.add('body-add')
   modalChatWindow.focus()
 })
@@ -343,8 +343,8 @@ modalCallButtonClose.addEventListener('click', function () {
   body.classList.remove('body-add')
 })
 menuCallButton.addEventListener('click', function () {
-  menuWraper.classList.toggle('wrapper-menu-add')
-  modalCall.classList.toggle('modal-call-add')
+  menuWraper.classList.remove('wrapper-menu-add')
+  modalCall.classList.add('modal-call-add')
   body.classList.add('body-add')
   modalChatWindow.focus()
 })

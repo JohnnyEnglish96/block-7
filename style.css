@@ -350,7 +350,8 @@ button {
   font-style: normal; }
 
 .body-add {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .body-add::before {
     content: '';
     width: 100%;
@@ -567,7 +568,7 @@ button {
     margin-bottom: 24px; } }
 
 @media (max-width: 320px) {
-  .wrapper-menu {
+  .wrapper-menu-content {
     padding: 23px 16px 32px 16px; }
   .main-menu-nav__link:hover .main-menu-nav__link-address::before {
     content: url(./static/highlight.svg);
@@ -592,13 +593,12 @@ button {
   right: 0;
   max-width: 440px;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100%;
   padding: 24px 16px 0 16px;
   background: #ffffff;
   transform: translateX(600px);
   transition: all 0.5s;
-  visibility: hidden;
-  z-index: 2; }
+  visibility: hidden; }
   .container-modal-feedback .modal-feedback-title {
     font-size: 24px;
     font-weight: 600;
@@ -676,7 +676,11 @@ button {
 .modal-feedback-add {
   transform: translateX(0);
   visibility: visible;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  overflow: visible;
+  top: 0;
+  bottom: 0;
+  z-index: 2; }
 
 @media (max-width: 500px) {
   .modal-feedback-button-close {
@@ -687,7 +691,7 @@ button {
 .container-modal-call {
   max-width: 440px;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100%;
   padding: 24px 16px 0 16px;
   background: #ffffff;
   transform: translateX(600px);
@@ -696,7 +700,8 @@ button {
   z-index: 2;
   position: fixed;
   top: 0;
-  right: 0; }
+  right: 0;
+  overflow-y: auto; }
   .container-modal-call .modal-call-title {
     font-size: 24px;
     font-weight: 600;
@@ -764,7 +769,8 @@ button {
     margin-bottom: 24px; } }
 
 .body {
-  max-width: 1920px; }
+  max-width: 1920px;
+  overflow-x: hidden; }
 
 .container-main {
   margin: 0 auto;
