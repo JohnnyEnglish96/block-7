@@ -329,7 +329,8 @@ ul {
 
 button {
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
 
 @font-face {
   font-family: 'TT Lakes';
