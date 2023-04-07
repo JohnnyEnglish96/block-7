@@ -678,8 +678,6 @@ button {
   visibility: visible;
   transition: all 0.5s;
   overflow: visible;
-  top: 0;
-  bottom: 0;
   z-index: 2; }
 
 @media (max-width: 500px) {
@@ -697,7 +695,6 @@ button {
   transform: translateX(600px);
   transition: all 0.5s;
   visibility: hidden;
-  z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
@@ -761,7 +758,9 @@ button {
 .modal-call-add {
   transform: translateX(0);
   visibility: visible;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  z-index: 2;
+  overflow: visible; }
 
 @media (max-width: 500px) {
   .modal-call-button-close {
