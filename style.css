@@ -318,7 +318,7 @@ html {
 
 body {
   font-family: 'TT Lakes', sans-serif;
-  height: 100vh; }
+  height: 100%; }
 
 a {
   color: inherit;
